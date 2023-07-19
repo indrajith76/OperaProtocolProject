@@ -11,13 +11,14 @@ function App() {
       path: "/",
       element: <Main />,
       children: [
-        { path: "/", element: <Dashboard /> },
+        { path: "/", element: <Stake /> },
+        // { path: "/", element: <Dashboard /> },
         { path: "/stake", element: <Stake /> },
         { path: "/launchToken", element: <LaunchToken /> },
-        {
-          path: "/governance",
-          element: <Governance />,
-        },
+        // {
+        //   path: "/governance",
+        //   element: <Governance />,
+        // },
       ],
     },
   ]);

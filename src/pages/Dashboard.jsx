@@ -2,17 +2,21 @@ import ethereum from "../assets/icons/ethereum.png";
 import arrow from "../assets/icons/arrow.png";
 import { Link } from "react-router-dom";
 import triangle from "../assets/icons/triangle.png"; 
-
+import {  useOutletContext} from "react-router-dom";
+import {trimAddress } from "../helperfunctions"
+// eslint-disable-next-line react/prop-types
 const Dashboard = () => { 
+  const { connectWallet, addressOfUser } = useOutletContext();
+
   return (
     <section>
       <div className="flex justify-between items-center pt-[44px] pb-[30px] lg:pr-[50px]"> 
         <h4 className="text-[24px] tracking-[0.075em] ml-14 lg:ml-0">Dashboard</h4>
         <div className="flex items-center">
           <img src={ethereum} className="hidden lg:block" alt="" />
-          <Link className="flex items-center text-[10px] lg:text-[20px] text-[#85F983] bg-[#1A2218] pl-4 pr-4 rounded-2xl ml-1">
-            0x09C73BCR4... <img src={arrow} className="w-[10px] lg:w-[27px]" alt="" />
-          </Link>
+          <button onClick={()=>{if(addressOfUser)return;connectWallet()}} className="flex items-center text-[10px] lg:text-[20px] text-[#85F983] bg-[#1A2218] pl-4 pr-4 rounded-2xl ml-1">
+            {addressOfUser ? trimAddress(addressOfUser) : "CONNECT WALLET"} <img src={arrow} className="ml-5 w-[10px] lg:w-[27px]" alt="" />
+          </button>
         </div>
       </div>
 
