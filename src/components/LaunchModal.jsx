@@ -151,13 +151,13 @@ PLEASE CONFIRM THE TRANSACTION
           Eth Borrowed
           </p>
           <p className="text-[12px] text-center tracking-[0.075em] mb-[15px] font-medium">
-            {modalOn.borrowedEth } BNB
+            {modalOn.borrowedEth } ETH
           </p>
           <p className="text-[22px] text-center tracking-[0.075em] font-medium">
           Deployment and Borrow Fee
           </p>
           <p className="text-[12px] text-center tracking-[0.075em] mb-[15px] font-medium">
-            {modalOn.borrowedEth / 10} BNB
+            {modalOn.borrowedEth / 10} ETH
           </p>
 
           <div className="flex flex-col items-center gap-[9px]">

@@ -46,8 +46,8 @@ const LaunchToken = () => {
     let initialSwapThreshold = parseFloat(swapInput).toFixed(1)
     let initialMaxWallet = parseFloat(maxWalletInput).toFixed(1)
     supplyInput = parseInt(supplyInput)
-    swapInput = supplyInput * (parseFloat(swapInput).toFixed(1) / 100)
-    maxWalletInput = supplyInput * (parseFloat(maxWalletInput).toFixed(1) / 100)
+    swapInput = parseInt(supplyInput * (parseFloat(swapInput).toFixed(1) / 100))
+    maxWalletInput = parseInt(supplyInput * (parseFloat(maxWalletInput).toFixed(1) / 100))
 
     marketingBuyInput = parseFloat(marketingBuyInput).toFixed(1) * 10
     marketingSellInput = parseFloat(marketingSellInput).toFixed(1) * 10

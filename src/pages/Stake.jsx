@@ -159,7 +159,7 @@ const Stake = () => {
             </p>
             <input
               id="inputOperaStaked"
-              onChange={(_)=>{setInputValueStaked(_.target.value)}}
+              onChange={(_)=>{setOperaStake(_.target.value)}}
               type="text"
               className="border border-white bg-black text-[22px] p-[13px] pl-[35px] w-full  rounded-[11px]"
               defaultValue="0"
@@ -257,7 +257,7 @@ const Stake = () => {
           <p className="text-[#AAAAAA] text-[19px] tracking-[0.075em]">
             YOUR CLAIMABLE REVENUE
           </p>
-          <p className="text-[22px] tracking-[0.075em] mb-[31px]">{userData.usersClaimedRevenue ? ((userData.usersRevenue - userData.usersClaimedRevenue) / 10**18).toFixed(3) : 0} ETH</p>
+          <p className="text-[22px] tracking-[0.075em] mb-[31px]">{userData.usersRevenue ? ((userData.usersRevenue - userData.usersClaimedRevenue) / 10**18).toFixed(3) : 0} ETH</p>
           <button onClick={()=>{requestRevenue()}}  className="pl-[47px] pr-[47px] pt-[2px] pb-[2px] border border-white rounded-[13px] mb-[13px]">
               REQUEST REVENUE
             </button>
